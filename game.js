@@ -60,8 +60,8 @@ function resetGame() {
   scoreEl.textContent = "0";
   overlay.classList.remove("hidden");
   overlay.querySelector("h2").textContent = "Flybird";
-  overlayText.textContent = "Klik / tap / spasi untuk mulai terbang.";
-  startButton.textContent = "Mulai";
+  overlayText.textContent = "Click/tap/space to start flying.";
+  startButton.textContent = "Start";
   pauseButton.textContent = "Pause";
 }
 
@@ -96,9 +96,9 @@ function togglePause() {
     game.status = "paused";
     overlay.classList.remove("hidden");
     overlay.querySelector("h2").textContent = "Pause";
-    overlayText.textContent = "Tekan lanjut untuk meneruskan game.";
-    startButton.textContent = "Lanjut";
-    pauseButton.textContent = "Lanjut";
+    overlayText.textContent = "Press continue to continue the game.";
+    startButton.textContent = "continue";
+    pauseButton.textContent = "continue";
   } else if (game.status === "paused") {
     game.status = "playing";
     overlay.classList.add("hidden");
@@ -127,7 +127,7 @@ function gameOver() {
   bestEl.textContent = game.best;
   overlay.classList.remove("hidden");
   overlay.querySelector("h2").textContent = "Game Over";
-  overlayText.textContent = `Skor kamu ${game.score}. Klik restart untuk coba lagi.`;
+  overlayText.textContent = `Skor kamu ${game.score}. Click restart to try again.`;
   startButton.textContent = "Restart";
 }
 
