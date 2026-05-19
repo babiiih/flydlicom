@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flybird</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Dlicom Arcade</p>
+        <h1>FlyDlicom</h1>
+        <p class="description">
+          Fly the Dlicom bird through the blue pipes. Click, tap, or press the space bar to flap.
+        </p>
+        <div class="sprite-strip" aria-label="Preview sprite burung">
+          <img src="./assets/bird-frame-0.png" alt="Flybird frame 1" />
+          <img src="./assets/bird-frame-1.png" alt="Flybird frame 2" />
+          <img src="./assets/bird-frame-2.png" alt="Flybird frame 3" />
+          <img src="./assets/bird-frame-3.png" alt="Flybird frame 4" />
+          <img src="./assets/bird-frame-4.png" alt="Flybird frame 5" />
+        </div>
+      </section>
+
+      <section class="game-card">
+        <canvas id="game" width="432" height="640" aria-label="Flybird game"></canvas>
+        <div class="hud" aria-hidden="true">
+          <div>
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>Best</span>
+            <strong id="best">0</strong>
+          </div>
+        </div>
+        <div id="overlay" class="overlay">
+          <h2>Flybird</h2>
+          <p id="overlayText">Click/tap/space to start flying.</p>
+          <button id="startButton" type="button">Mulai</button>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button id="pauseButton" type="button">Pause</button>
+        <button id="restartButton" type="button">Restart</button>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
